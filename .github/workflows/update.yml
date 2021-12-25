@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: r-lib/actions/setup-r@master
       - name: Install dependencies
-        run: Rscript -e "install.packages('cyphr', 'sodium', dependencies= TRUE)"
+        run: Rscript -e "install.packages('cyphr', dependencies= TRUE)"
       - name: Fetch data
         run: |
           Rscript global_script.R   
