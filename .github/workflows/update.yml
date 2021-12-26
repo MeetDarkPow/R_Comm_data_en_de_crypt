@@ -14,11 +14,11 @@ jobs:
       - uses: actions/checkout@master
       - uses: r-lib/actions/setup-r@master
       - name: Install dependencies
-        run: Rscript -e "install.packages('cyphr, sodium', dependencies= TRUE)"
+        run: Rscript -e "install.packages('sodium', dependencies= TRUE)"
       - name: Fetch data
         run: |
           Rscript global_script.R   
-      - name: Update csv
+      - name: Update encrypted file
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
